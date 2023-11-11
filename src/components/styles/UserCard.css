@@ -1,0 +1,62 @@
+.article__user{
+
+    padding: 2em;
+    margin: 2em;
+    border: 2px solid rgb(0,0,0,0.1);
+}
+
+.hr__user{
+    border: 1px solid rgb(0,0,0,0.1);
+    margin: 0.5em 0;
+}
+
+
+
+.article__nombres{
+   font-size: 1.5em;
+   font-weight: 600;
+
+}
+
+
+
+
+
+
+
+.li__user{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.span__user{
+    color: #D3D3D3;
+}
+
+
+.div__botones{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.boton_borrar{
+    background-color: #D93F3F;
+    color: white;
+    width: 33px;
+    height: 33px;
+}
+
+
+.imagen_borrar{
+    width: 24px;
+    height: 24px;
+}
+
+
+.boton_editar{
+    background-color: #BDBDBD;
+    color: white;
+    width: 33px;
+    height: 33px;
+}
