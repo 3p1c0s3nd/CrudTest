@@ -7,7 +7,7 @@ import UserCard from "./components/UserCard";
 function App() {
   const [isDisable, setIsDisable] = useState(false);
   const [infoUpdate, setInfoUpdate] = useState();
-  const url = "https://users-crud.academlo.tech";
+  const url = "https://apiusers-dev-axmz.4.us-1.fl0.io";
   const [users, getUsers, createUsers, deleteUsers, updateUsers] = useCrud(url);
   useEffect(() => {
     getUsers("/users");

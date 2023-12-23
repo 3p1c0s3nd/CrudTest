@@ -1,10 +1,11 @@
-import { useEffect} from "react";
+import { useEffect, useState} from "react";
 import { useForm} from "react-hook-form"
 import './styles/FormUser.css'
 const FormUser = ({createUsers, infoUpdate, updateUsers, setInfoUpdate,  isDisable, setIsDisable}) =>{
 
     
     const { handleSubmit, register, reset } = useForm();
+    const [isEnviar, setIsEnviar] = useState(false);
 
     useEffect(()=>{
         reset(infoUpdate);
@@ -16,6 +17,7 @@ const FormUser = ({createUsers, infoUpdate, updateUsers, setInfoUpdate,  isDisab
         if(infoUpdate){
             
             updateUsers('/users', data, infoUpdate.id);
+            setIsEnviar(true);
             setInfoUpdate();//reseteamos el valor de setinfoupdate
         }else{
             createUsers('/users',data);
@@ -45,6 +47,7 @@ const FormUser = ({createUsers, infoUpdate, updateUsers, setInfoUpdate,  isDisab
     };
     
     return (<div className={`form-container ${isDisable && 'form__disable'}`}>
+        
         <form onSubmit={handleSubmit(submit)} className="form">
             <h2 className="form__title">
                 Form Users
